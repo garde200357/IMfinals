@@ -28,12 +28,14 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `tbl_book` (
-  `book_id` int(100) NOT NULL,
+  `id` int(100) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `fullname` varchar(100) NOT NULL,
   `phone` int(11) NOT NULL,
   `email` varchar(100) NOT NULL,
   `bdate` date NOT NULL,
-  `btime` time NOT NULL,
+  `btime_in` varchar(255) NOT NULL,
+  `btime_out` varchar(255) NOT NULL,
   `remarks` varchar(255) NOT NULL,
   `book_stats` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -49,6 +51,9 @@ CREATE TABLE `tbl_message` (
   `name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `message` text NOT NULL
+  `message_status` varchar(255) NOT NULL,
+  `date_created` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  `user_id` int(11) NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
