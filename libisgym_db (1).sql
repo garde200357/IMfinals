@@ -50,7 +50,7 @@ CREATE TABLE `tbl_message` (
   `id` int(100) NOT NULL,
   `name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `message` text NOT NULL
+  `message` text NOT NULL,
   `message_status` varchar(255) NOT NULL,
   `date_created` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   `user_id` int(11) NOT NULL,
